@@ -1,0 +1,12 @@
+auto-save-list/
+elpa/
+.cache
+.recentf
+.projectile
+projectile.cache
+projectile-bookmarks.eld
+*.elc
+*.pyc
+*.*~
+recentf
+snippets/
