@@ -6,3 +6,6 @@
 
 ;; Disable Alarm Bell
 (setq ring-bell-function 'ignore)
+
+;; Revert Buffers Automatically
+;;(global-auto-revert-mode 1)

@@ -1,3 +1,6 @@
 ;; SmartParens
-(use-package smartparens-config
-  :ensure t)
+(use-package smartparens
+  :diminish smartparens-mode
+  :config
+  (require 'smartparens-config)
+  (smartparens-global-mode))

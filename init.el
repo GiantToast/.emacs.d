@@ -38,7 +38,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (cider clojure-mode ensime magit yasnippet company multiple-cursors neotree smartparens-config helm-projectile helm-config ace-jump-mode projectile rainbow-mode beacon monokai-theme all-the-icons dashboard page-break-lines use-package))))
+    (elscreen prodigy smartparens cider clojure-mode ensime magit yasnippet company multiple-cursors neotree smartparens-config helm-projectile helm-config ace-jump-mode projectile rainbow-mode beacon monokai-theme all-the-icons dashboard page-break-lines use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
