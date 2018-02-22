@@ -10,10 +10,21 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+(unless (package-installed-p 'diminish)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
 (eval-when-compile
   (require 'use-package))
 (require 'diminish)
 (require 'bind-key)
+
+;; Set up PATH from shell
+(use-package exec-path-from-shell
+  :demand t
+  :ensure t
+  :config (when (memq window-system '(mac ns x))
+	    (exec-path-from-shell-initialize)))
 
 ;; Add Module Dirs to Load-Path
 (add-to-list 'load-path "~/.emacs.d/modules")
@@ -38,7 +49,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (elscreen prodigy smartparens cider clojure-mode ensime magit yasnippet company multiple-cursors neotree smartparens-config helm-projectile helm-config ace-jump-mode projectile rainbow-mode beacon monokai-theme all-the-icons dashboard page-break-lines use-package))))
+    (calfw-ical calfw org-mac-iCal stan-snippets stan-mode ess elscreen prodigy smartparens cider clojure-mode ensime magit yasnippet company multiple-cursors neotree smartparens-config helm-projectile helm-config ace-jump-mode projectile rainbow-mode beacon monokai-theme all-the-icons dashboard page-break-lines use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
