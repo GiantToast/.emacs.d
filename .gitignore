@@ -11,3 +11,10 @@ projectile-bookmarks.eld
 recentf
 snippets/
 url/
+.mc-lists.el
+abbrev_defs
+company-statistics-cache.el
+games
+magithub
+oauth2.plstore
+core-prodigy-services.el

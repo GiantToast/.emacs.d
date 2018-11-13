@@ -5,13 +5,12 @@
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
 (package-initialize)
+(package-refresh-contents)
 
 (unless (package-installed-p 'use-package)
-  (package-refresh-contents)
   (package-install 'use-package))
 
 (unless (package-installed-p 'diminish)
-  (package-refresh-contents)
   (package-install 'use-package))
 
 (eval-when-compile
@@ -34,6 +33,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/editing")
 (add-to-list 'load-path "~/.emacs.d/modules/versioning")
 (add-to-list 'load-path "~/.emacs.d/modules/languages")
+(add-to-list 'load-path "~/.emacs.d/modules/fun")
 
 ;; Load Individual Modules
 (load "core/core-init")
@@ -42,6 +42,10 @@
 (load "editing/editing-init")
 (load "versioning/versioning-init")
 (load "languages/languages-init")
+
+;; Start Emacs Server
+(server-start)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -49,7 +53,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (calfw-ical calfw org-mac-iCal stan-snippets stan-mode ess elscreen prodigy smartparens cider clojure-mode ensime magit yasnippet company multiple-cursors neotree smartparens-config helm-projectile helm-config ace-jump-mode projectile rainbow-mode beacon monokai-theme all-the-icons dashboard page-break-lines use-package))))
+    (json-mode tide yaml-mode magithub calfw-ical calfw org-mac-iCal stan-snippets stan-mode ess elscreen prodigy smartparens cider clojure-mode ensime magit yasnippet company multiple-cursors neotree smartparens-config helm-projectile helm-config ace-jump-mode projectile rainbow-mode beacon monokai-theme all-the-icons dashboard page-break-lines use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

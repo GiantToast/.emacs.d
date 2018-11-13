@@ -4,3 +4,4 @@
 (load "appearance-powerline.el")
 (load "appearance-beacon.el")
 (load "appearance-rainbows.el")
+(load "appearance-nyan.el")

@@ -3,3 +3,8 @@
 (load "languages-clojure.el")
 (load "languages-ess.el")
 (load "languages-stan.el")
+(load "languages-markdown.el")
+(load "languages-yaml.el")
+(load "languages-typescript.el")
+(load "languages-javascript.el")
+(load "languages-json.el")
