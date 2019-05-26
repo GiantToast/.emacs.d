@@ -53,7 +53,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (json-mode tide yaml-mode magithub calfw-ical calfw org-mac-iCal stan-snippets stan-mode ess elscreen prodigy smartparens cider clojure-mode ensime magit yasnippet company multiple-cursors neotree smartparens-config helm-projectile helm-config ace-jump-mode projectile rainbow-mode beacon monokai-theme all-the-icons dashboard page-break-lines use-package))))
+    (doom-modeline doom-themes kubernetes minimap groovy-mode dockerfile-mode json-mode tide yaml-mode magithub calfw-ical calfw org-mac-iCal stan-snippets stan-mode ess elscreen prodigy smartparens cider clojure-mode ensime magit yasnippet company multiple-cursors neotree smartparens-config helm-projectile helm-config ace-jump-mode projectile rainbow-mode beacon monokai-theme all-the-icons dashboard page-break-lines use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
