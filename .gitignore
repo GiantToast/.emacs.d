@@ -3,6 +3,7 @@ elpa/
 .cache
 .recentf
 .projectile
+.lsp-session*
 projectile.cache
 projectile-bookmarks.eld
 *.elc
@@ -17,5 +18,5 @@ company-statistics-cache.el
 games
 magithub
 oauth2.plstore
-core-prodigy-services.el
+core-prodigy-*.el
 server

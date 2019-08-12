@@ -1,18 +1,22 @@
 ;; Setup Package Manager
 (require 'package)
 (setq package-enable-at-startup nil)
+
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
+
 (package-initialize)
 (package-refresh-contents)
+
+;; Install Diminish and Use Package
+(unless (package-installed-p 'diminish)
+  (package-install 'diminish))
 
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
-(unless (package-installed-p 'diminish)
-  (package-install 'use-package))
-
+;; Setup Diminish, Use Package, and Bind Key
 (eval-when-compile
   (require 'use-package))
 (require 'diminish)
@@ -45,7 +49,6 @@
 
 ;; Start Emacs Server
 (server-start)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -53,7 +56,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (doom-modeline doom-themes kubernetes minimap groovy-mode dockerfile-mode json-mode tide yaml-mode magithub calfw-ical calfw org-mac-iCal stan-snippets stan-mode ess elscreen prodigy smartparens cider clojure-mode ensime magit yasnippet company multiple-cursors neotree smartparens-config helm-projectile helm-config ace-jump-mode projectile rainbow-mode beacon monokai-theme all-the-icons dashboard page-break-lines use-package))))
+    (meghanada spaceline-all-the-icons spaceline helm-projectile helm prodigy dashboard page-break-lines exec-path-from-shell use-package diminish))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

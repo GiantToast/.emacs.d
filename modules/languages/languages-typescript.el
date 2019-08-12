@@ -41,6 +41,12 @@
 (add-hook 'js2-mode-hook
 	  (lambda() (flycheck-add-next-checker 'javascript-eslint 'javascript-tide 'append)))
 
+;; Typescript Mode Indentation
+(setq typescript-indent-level 2)
+
+;; JS2 Mode Indentation
+(setq js2-basic-offset 2)
+
 ;; Web Mode Indentation
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
@@ -48,3 +54,4 @@
 (setq web-mode-script-padding 2)
 (setq web-mode-attr-indent-offset 2)
 (setq web-mode-enable-css-colorization t)
+(add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))

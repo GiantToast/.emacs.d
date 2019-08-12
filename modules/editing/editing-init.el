@@ -8,7 +8,6 @@
 ;; Load Packages
 (load "editing-flycheck.el")
 (load "editing-ace.el")
-(load "editing-helm.el")
 (load "editing-parens.el")
 (load "editing-neotree.el")
 (load "editing-cursors.el")

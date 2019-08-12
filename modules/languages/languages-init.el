@@ -1,4 +1,5 @@
 ;; Load packages and configuration related to specific languages
+(load "languages-lsp.el")
 (load "languages-scala.el")
 (load "languages-clojure.el")
 (load "languages-ess.el")
@@ -11,3 +12,6 @@
 (load "languages-json.el")
 (load "languages-docker.el")
 (load "languages-groovy.el")
+(load "languages-rust.el")
+(load "languages-toml.el")
+(load "languages-java.el")

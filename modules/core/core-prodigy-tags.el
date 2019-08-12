@@ -36,6 +36,23 @@
   :command "npm")
 
 (prodigy-define-tag
+  :name 'cmd-yarn
+  :hide t
+  :tags '(path-cmds)
+  :command "yarn")
+
+(prodigy-define-tag
+  :name 'cmd-react-native
+  :hide t
+  :tags '(path-cmds)
+  :command "react-native")
+
+(prodigy-define-tag
+  :name 'env-android
+  :hide t
+  :env '(("ANDROID_HOME" "/Users/kjones/Library/Android/sdk")))
+
+(prodigy-define-tag
   :name 'env-continuum
   :hide t
   :env '(("CONTINUUM_PORT" "8186")))
@@ -53,7 +70,7 @@
 (prodigy-define-tag
   :name 'env-experimentfactory
   :hide t
-  :env '(("EXPERIMENTFACTORY_PORT" "8080")))
+  :env '(("EXPERIMENTFACTORY_URI" "http://localhost:8080")))
 
 (prodigy-define-tag
   :name 'env-argo-aws
