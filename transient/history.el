@@ -12,4 +12,6 @@
  (magit-push nil
              ("--force"))
  (magit-rebase nil)
+ (magit-revert
+  ("--edit"))
  (magit-stash nil))

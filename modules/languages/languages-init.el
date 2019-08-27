@@ -8,7 +8,6 @@
 (load "languages-yaml.el")
 (load "languages-web.el")
 (load "languages-typescript.el")
-(load "languages-javascript.el")
 (load "languages-json.el")
 (load "languages-docker.el")
 (load "languages-groovy.el")
