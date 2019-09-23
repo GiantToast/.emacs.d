@@ -14,4 +14,3 @@
   (doom-themes-org-config)
   (setq doom-neotree-file-icons t)
   (setq doom-neotree-project-size 1.1))
-

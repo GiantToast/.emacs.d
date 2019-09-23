@@ -2,10 +2,16 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
+;; Hack to fix bug with TLS
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+;;(setq package-check-signature nil)
 
+;; Add Other Archives
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("melpa-stable" . "https://stable.melpa.org/packages/")
+                         ("gnu" . "https://elpa.gnu.org/packages/")))
+
+;; Initialize
 (package-initialize)
 (package-refresh-contents)
 
@@ -56,7 +62,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (meghanada spaceline-all-the-icons spaceline helm-projectile helm prodigy dashboard page-break-lines exec-path-from-shell use-package diminish))))
+    (gnu-elpa-keyring-update spinner meghanada spaceline-all-the-icons spaceline helm-projectile helm prodigy dashboard page-break-lines exec-path-from-shell use-package diminish))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

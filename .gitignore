@@ -21,3 +21,5 @@ magithub
 oauth2.plstore
 core-prodigy-*.el
 server
+.#recent*
+session*
