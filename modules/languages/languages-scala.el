@@ -1,18 +1,16 @@
-(use-package ensime
-  :demand
+;; Scala
+(use-package scala-mode
   :ensure t
-  :pin melpa-stable)
+  :mode "\\.s\\(cala\\|bt\\)$"
+  :hook (scala-mode . lsp))
 
-;; (defun format-scala-code ()
-;;   (when (eq major-mode 'scala-mode)
-;;     (shell-command-to-string (format "ng scalaformat --exclude .ensime %s" buffer-file-name))))
-
-(defun format-scala-code ()
-  (when (eq major-mode 'scala-mode)
-    (progn      
-      (message
-       (shell-command-to-string
-	(format "/usr/local/Cellar/nailgun/0.9.3/bin/ng org.scalafmt.cli.Cli --exclude .ensime %s" buffer-file-name)))
-      (revert-buffer :ignore-auto :noconfirm))))
-
-(add-hook 'after-save-hook #'format-scala-code)
+(use-package sbt-mode
+  :ensure t
+  :commands sbt-start sbt-command
+  :config
+  ;; WORKAROUND: https://github.com/ensime/emacs-sbt-mode/issues/31
+  ;; allows using SPACE when in the minibuffer
+  (substitute-key-definition
+   'minibuffer-complete-word
+   'self-insert-command
+   minibuffer-local-completion-map))
