@@ -4,5 +4,6 @@
 (load "appearance-spaceline.el")
 ;; (load "appearance-powerline.el")
 ;; (load "appearance-doom-modeline.el")
+;; (load "appearance-nyan.el")
 (load "appearance-beacon.el")
 (load "appearance-rainbows.el")

@@ -1,7 +1,16 @@
 ;; Web Mode
+(use-package emmet-mode
+  :ensure t
+  :hook web-mode)
+
 (use-package web-mode
   :ensure t
-  :config
-  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode)))
+  :init
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-content-types-alist '(("jsx" . "\\.js[x]?\\'")))
+  (setq-default flycheck-disabled-checkers
+                (append flycheck-disabled-checkers
+                        '(javascript-jshint json-jsonlist)))
+  :mode (("\\.html?\\'" . web-mode)
+         ("\\.tsx?$\\'" . web-mode)
+         ("\\.jsx?$" . web-mode)))

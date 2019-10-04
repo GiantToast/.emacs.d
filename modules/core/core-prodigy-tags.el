@@ -1,7 +1,11 @@
 ;; TAGS
 (prodigy-define-tag
-  :name 'pathcmds
+  :name 'path-cmds
   :path "/usr/local/bin")
+
+(prodigy-define-tag
+  :name 'path-cmds-nvm
+  :path (getenv "NVM_BIN"))
 
 (prodigy-define-tag
   :name 'cmd-kubectl
@@ -30,9 +34,21 @@
   :command "node")
 
 (prodigy-define-tag
+  :name 'cmd-node-nvm
+  :hide t
+  :tags '(path-cmds-nvm)
+  :command "node")
+
+(prodigy-define-tag
   :name 'cmd-npm
   :hide t
   :tags '(path-cmds)
+  :command "npm")
+
+(prodigy-define-tag
+  :name 'cmd-npm-nvm
+  :hide t
+  :tags '(path-cmds-nvm)
   :command "npm")
 
 (prodigy-define-tag
@@ -48,37 +64,13 @@
   :command "react-native")
 
 (prodigy-define-tag
-  :name 'env-android
+  :name 'cmd-docker
   :hide t
-  :env '(("ANDROID_HOME" "/Users/kjones/Library/Android/sdk")))
+  :tags '(path-cmds)
+  :command "docker")
 
 (prodigy-define-tag
-  :name 'env-continuum
+  :name 'cmd-docker-compose
   :hide t
-  :env '(("CONTINUUM_PORT" "8186")))
-
-(prodigy-define-tag
-  :name 'env-sylvester
-  :hide t
-  :env '(("SYLVESTER_URI" "http://localhost:8184")))
-
-(prodigy-define-tag
-  :name 'env-cropnosis
-  :hide t
-  :env '(("CROPNOSIS_PORT" "8185")))
-
-(prodigy-define-tag
-  :name 'env-experimentfactory
-  :hide t
-  :env '(("EXPERIMENTFACTORY_URI" "http://localhost:8080")))
-
-(prodigy-define-tag
-  :name 'env-argo-aws
-  :hide t
-  :env '(("AWS_PROFILE" "argo-shared-arch")))
-
-(prodigy-define-tag
-  :name 'env-cibo
-  :hide t
-  :env '(("STACK_NAME" "dev")
-	 ("CIBO_ENV" "automatron")))
+  :tags '(path-cmds)
+  :command "docker-compose")
