@@ -1,3 +1,8 @@
+;; Helper Functions
+(defun load-directory (dir)
+  (let ((load-it (lambda (f) (load-file (concat (file-name-as-directory dir) f)))))
+    (mapc load-it (directory-files dir nil "\\.el$"))))
+
 ;; Setup Package Manager
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -12,6 +17,7 @@
                          ("gnu" . "https://elpa.gnu.org/packages/")))
 
 ;; Initialize
+(load-directory "~/.emacs.d/custom")
 (package-initialize)
 (package-refresh-contents)
 
@@ -32,7 +38,9 @@
 (use-package exec-path-from-shell
   :demand t
   :ensure t
-  :config (when (memq window-system '(mac ns x))
+  :config
+  (add-to-list 'exec-path-from-shell-variables '"NVM_BIN")
+  (when (memq window-system '(mac ns x))
 	    (exec-path-from-shell-initialize)))
 
 ;; Add Module Dirs to Load-Path

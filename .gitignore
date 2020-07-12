@@ -23,4 +23,6 @@ core-prodigy-*.el
 server
 .#recent*
 session*
-transient/
+custom/*
+!custom/README.md
+transient
