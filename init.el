@@ -62,7 +62,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (gnu-elpa-keyring-update spinner meghanada spaceline-all-the-icons spaceline helm-projectile helm prodigy dashboard page-break-lines exec-path-from-shell use-package diminish))))
+    (flycheck-pony ponylang-mode helm-swoop use-package-hydra hydra gnu-elpa-keyring-update spinner meghanada spaceline-all-the-icons spaceline helm-projectile helm prodigy dashboard page-break-lines exec-path-from-shell use-package diminish))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -15,3 +15,4 @@
 (load "languages-rust.el")
 (load "languages-toml.el")
 (load "languages-java.el")
+(load "languages-pony.el")

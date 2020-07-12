@@ -2,10 +2,9 @@
 ;; Navigating Buffers, Buffer Completion,
 ;; Parens, Autocompletion, etc.
 
-;; Soft Tabs
-(setq-default indent-tabs-mode nil)
-
 ;; Load Packages
+(load "editing-indent.el")
+(load "editing-trailing-spaces.el")
 (load "editing-flycheck.el")
 (load "editing-ace.el")
 (load "editing-parens.el")

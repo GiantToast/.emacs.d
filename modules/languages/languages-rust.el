@@ -3,7 +3,8 @@
 
 (use-package rust-mode
   :ensure t
-  :hook (rust-mode . lsp))
+  :hook ((rust-mode . lsp)
+         (rust-mode . flycheck-mode)))
 
 (use-package cargo
   :ensure t

@@ -7,3 +7,4 @@
 (load "core-prodigy.el")
 (load "core-helm.el")
 (load "core-kubernetes.el")
+(load "core-hydra.el")

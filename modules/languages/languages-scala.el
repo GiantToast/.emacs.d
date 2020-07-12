@@ -2,7 +2,8 @@
 (use-package scala-mode
   :ensure t
   :mode "\\.s\\(cala\\|bt\\)$"
-  :hook (scala-mode . lsp))
+  :hook ((scala-mode . lsp)
+         (scala-mode . flycheck-mode)))
 
 (use-package sbt-mode
   :ensure t
